@@ -124,4 +124,5 @@
     feedback.style.display = "block";
 
     disableClicks();
+
       });
