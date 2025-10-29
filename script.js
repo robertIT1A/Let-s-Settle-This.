@@ -1,6 +1,5 @@
       const  ChickenOption = document.getElementById("Chicken");
       const EggOption = document.getElementById("Egg");
-    //   const feedback = document.getElementById("feedback");
 
     const Chickenpercentage = {
         Chicken: 56,
@@ -188,3 +187,4 @@
         document.getElementById("overlay").style.display = "none";
         document.getElementById("animalImage").style.display = "none";
       }
+
