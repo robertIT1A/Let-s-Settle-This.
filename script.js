@@ -18,6 +18,23 @@
     disableClicks();
       });
       
+
+    EggOption.addEventListener("click", () => {
+    ChickenOption.textContent = `Chicken 🐔 (${Chickenpercentage.Chicken}%)`; 
+    EggOption.textContent = `Egg 🐣 (${Chickenpercentage.Egg}%)`;
+    EggOption.classList.add("select ed");
+    ChickenOption.classList.remove("selected");
+    
+    disableClicks();
+    });
+
+
+
+
+
+
+
+
       // dress
     const  BlueBlackOption = document.getElementById("BlueBlack");
     const WhiteGoldOption = document.getElementById("WhiteGold");
@@ -39,6 +56,15 @@
     disableClicks();
       });
 
+
+    WhiteGoldOption.addEventListener("click", () => {
+    BlueBlackOption.textContent = `BlueBlack (${Dresspercentages.BlueBlack}%)`; 
+    WhiteGoldOption.textContent = `WhiteGold (${Dresspercentages.WhiteGold}%)`;
+    WhiteGoldOption.classList.add("select ed");
+    BlueBlackOption.classList.remove("selected");
+    
+    disableClicks();
+    });
 
             // talk
     const  AnimalsOption = document.getElementById("Animals");
@@ -62,6 +88,17 @@
       });
 
 
+    LanguageOption.addEventListener("click", () => {
+    LanguageOption.textContent = `Language 📖 (${talkpercentages.Language}%)`; 
+    AnimalsOption.textContent = `Animals 🙀 (${talkpercentages.Animals}%)`;
+    LanguageOption.classList.add("select ed");
+    AnimalsOption.classList.remove("selected");
+    
+    disableClicks();
+    });
+
+    
+
       // never
     const  SleepOption = document.getElementById("Sleep");
     const EatOption = document.getElementById("Eat");
@@ -82,6 +119,17 @@
 
     disableClicks();
       });
+
+    EatOption.addEventListener("click", () => {
+    EatOption.textContent = `Eat 🕊️ (${neverpercentages.Eat}%)`; 
+    SleepOption.textContent = `Sleep 👻 (${neverpercentages.Sleep}%)`;
+    EatOption.classList.add("select ed");
+    SleepOption.classList.remove("selected");
+    
+    disableClicks();
+    });
+
+
 
       // rather
     const  PastOption = document.getElementById("Past");
@@ -104,25 +152,39 @@
     disableClicks();
       });
 
+    FutureOption.addEventListener("click", () => {
+    FutureOption.textContent = `Future 🔮 (${ratherpercentages.Future}%)`; 
+    PastOption.textContent = `Past ⏰ (${ratherpercentages.Past}%)`;
+    FutureOption.classList.add("select ed");
+    PastOption.classList.remove("selected");
+    
+    disableClicks();
+    });
 
       // love
     const  MeronOption = document.getElementById("Meron");
     const WalaOption = document.getElementById("Wala");
     //   const feedback = document.getElementById("feedback");
 
-    const lovepercentages = {
-        Meron: 50,
-        Wala: 50,
-    }
 
-    MeronOption.addEventListener("click", () => {
-    MeronOption.textContent = `Meron 🥰 (${lovepercentages.Meron}%)`; 
-    WalaOption.textContent = `Wala 😭 (${lovepercentages.Wala}%) Dapat ako nalang`;
 
-    MeronOption.classList.add("selected");
-    WalaOption.classList.remove("selected");
-    feedback.style.display = "block";
-
-    disableClicks();
-
+    WalaOption.addEventListener("click", () => {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("sadImage").style.display = "block";
       });
+
+      function hideImage() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("sadImage").style.display = "none";
+      }
+
+    
+    MeronOption.addEventListener("click", () => {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("animalImage").style.display = "block";
+      });
+
+      function hideImage() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("animalImage").style.display = "none";
+      }
